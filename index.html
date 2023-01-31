@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/script.js" defer></script>
+    <link rel="stylesheet" href="stylesheet/style.css" />
+    <title>Get images</title>
+  </head>
+  <body>
+    <form class="container-form">
+      <h1>Flickr</h1>
+      <label for="text">Search</label>
+      <input type="text" id="searchInput" />
+      <label for="number">How many pictures?</label>
+      <input type="number" id="numberInput" value="1" />
+
+      <div>
+        <input type="radio" name="imageSize" id="radioSmall" checked />
+        <label for="radioSmall">Small</label>
+        <input type="radio" name="imageSize" id="radioMedium" />
+        <label for="radioMedium">Medium</label>
+        <input type="radio" name="imageSize" id="radioLarge" />
+        <label for="radioLarge">Large</label>
+      </div>
+
+      <div id="filtersContainer" class="filters-container">
+        <label for="filters" class="select-label">Filter: </label>
+        <select name="filters" id="filters">
+          <option value="relevance">Relevance</option>
+          <option value="interestingness-desc">Interestingness</option>
+          <option value="date-posted-desc">Latest</option>
+        </select>
+      </div>
+
+      <button id="searchButton">Search</button>
+      <div id="errorMessageContainer" class="error-container"></div>
+      <div id="imageContainer" class="image-grid-container"></div>
+    </form>
+  </body>
+</html>
