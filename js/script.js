@@ -32,7 +32,8 @@ function getUserInput(event) {
     createErrorMessage("Please type what you want to search for.");
   } else if(numberOfImages < 1 || numberOfImages > 500){
     createErrorMessage("Number must be between 1 and 500.");
-  } else {
+  } 
+  else {
     // fetch images from the API
     fetch(flickrApiUrl)
       .then((response) => {
