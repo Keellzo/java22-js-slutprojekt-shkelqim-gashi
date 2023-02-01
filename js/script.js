@@ -69,6 +69,8 @@ function displayImages(images) {
       const aTag = document.createElement("a");
       aTag.href = img.src;
       aTag.target = "_blank";
+      aTag.style.height = "fit-content";
+      aTag.style.width = "fit-content";
       aTag.append(img);
 
       imageContainer.append(aTag);
